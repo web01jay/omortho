@@ -1,0 +1,67 @@
+			@font-face {
+				font-family: Arcved;
+				src: url(AARDC___.TTF);
+			}
+			*{box-sizing:border-box;}
+			html,body{margin:0; padding:0;}
+			/*Left navigation*/
+			nav{display:none; width:100%; top:0; position:fixed; background-color:#f44336;z-index:1000;}
+			nav h2{ font-family:Arcved; color:#fff; margin:2%; font-size: 24px;}
+			nav h2 span{float:right; font-family:"Poppins", sans-serif; font-weight:300; font-size:20px;}
+			nav ul{float:none !important; list-style-type:none; padding:2%; font-family: "Poppins", sans-serif; height:100%; width:100%; position:relative; background-color:#f44336; text-align:center;}
+			nav ul li{float:none !important; display:block; padding:2.5%; width:100% !important; color:whitesmoke;}
+			nav ul a{float:none;}
+			nav a{float:right; right:0; font-family:"Poppins", sans-serif; text-decoration:none; color:#fff; top:5px !important;}
+			/*Top navigation*/
+			aside{float:left; width:15%; height:100%; position:fixed; background-color:#f44336 !important; padding:8% 2%; line-height:1.5;}
+			aside h2{font-family:Arcved; color:#fff; margin:1%; font-size: 24px;}
+			aside ul{list-style-type:none; padding:0 !important; font-family: "Poppins", sans-serif; font-size: 18px !important; color:#fff !important;}
+			aside ul a{text-decoration:none; color:#fff;}
+			aside ul li{display:block; width:100%; padding:5%; color:#ff9b93; }
+			aside ul li:hover , .active{color:#fff;}
+			aside .aside_btn{color:#fff; bottom:0;}
+			/*-- Container starts --*/
+			section{float:right; right:0; width:85%; height:100%; position:absolute; background-color:#fff; }
+			/*-- Slideshow --*/
+			section .slider1 .slideshow-container article{text-align:center;}
+			section .slider1 .slideshow-container article a{cursor:pointer; font-size:20px;}
+			/*-- About us --*/
+			section #ip2{background-color:whitesmoke;}
+			section article{text-align:center;}
+			section article aside {width:50%; float:right;}
+			section article p{font-family: "Poppins", sans-serif;}
+			section #ip2 p{ padding:0 5%; text-align:justify; text-justify:inner-word;}
+			/*H2 in section article*/
+			section article h2{padding:2%; font-family: "Poppins", sans-serif; font-size:24px;}
+			/*Product category*/
+			section article .pr_panel{width:20%; margin:1.5%; display:inline-block; font-family: "Poppins"; border-radius:10px; transition-duration: 250ms;}
+			section article .pr_panel:hover{background-color:whitesmoke;}
+			section article a{text-decoration:none; color:black;}
+			section article a .pr_panel{width:20%; margin:1.5%; display:inline-block; font-family: "Poppins"; border-radius:10px;}
+			/*google map*/
+			section #ip4{background-color:whitesmoke;}
+			section article iframe{width:100%;}
+			/*footer*/
+			section article{font-family:"Poppins", sans-serif;}
+			#last{background-color:#f44336; color:#fff; text-align:center; margin:0; padding:2%;}
+			
+			/*product page*/
+			section .row{display:flex; flex-wrap:wrap;}
+			section .row .column{flex:25%; max-width:25%; margin:0; padding:1%;}
+			section .row .column{width:25%;}
+			section .row .column .im_wrap .im_box{position:relative; filter:grayscale(0%); padding:5%; margin-top:2%;}
+			section .row .column .im_wrap .im_box img{max-width:100%; }
+			section .row .column .im_wrap .im_box::after{transition-duration: 250ms; position:absolute; height:100%; width:100%; content:''; top:0; left:0; z-index:10; background-color:rgba(60,60,60,0.7); visibility:visible; opacity:0; border:0.5px solid transparent; border-radius:25px; }
+			section .row .column .im_wrap:hover .im_box::after, .im_box:focus .im_box::after{opacity:1;}
+			section .row .column .im_wrap:hover p{color:#f44336; z-index:101;}
+			
+			@media only screen and (max-width: 821px) {
+				nav{display:block;}
+				aside{display:none;} 
+				section{width:100%; top:60px;}
+				section article a .pr_panel{width:40%;}
+			} 
+			
+			@media only screen and (max-width:175px) and (min-width:820px) {
+					section article a .pr_panel{width:80%;}
+			}
