@@ -1,0 +1,1 @@
+@forward './dataTable/dataTables.bootstrap4.min.css';@forward './dataTable/dataTable.min.css';@forward './dataTable/responsive.bootstrap4.min.css';@forward './jquery.fancybox.min.css';@forward './owl.carousel.min.css';@forward './owl.theme.default.min.css' as owl_theme-*

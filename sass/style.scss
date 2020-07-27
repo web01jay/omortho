@@ -1,0 +1,57 @@
+@charset "UTF-8";
+// -----> Import & use other css start
+
+    @use './modules/modules';
+    @use './vendors/vendors';
+    @use './partials/partials';
+    @use "sass:color";
+    
+// -----> Import & use other css end
+
+// -----> variable start
+
+// common variables
+$round_radius: 50%;
+$breakpoints: (phone: 575px, tablet: 991px, desktop: 1024px) !default;
+$prefixes:(webkit, moz, ms, o);
+
+// color variables
+$color_black: #3e3e3e;
+$color_light_black: #646464;
+$color_white: #fff;
+$color_dull_white: #f9f9f9;
+$color_yellow: rgb(250, 255, 108);
+$color_grey: #a6a6a6;
+$color_orange: #ff7417;
+
+// -----> variable end
+
+// -----> mixin start
+
+// braekpoint mixin
+@mixin breakpoint($point) {
+    @if $point ==  desktop{
+      @media (min-width: 1025px) { @content; }
+    }
+    @else if $point == tablet {
+        @media only screen and (min-width: 576px) and (max-width: 1024px) { @content; }
+    }
+    @else if $point == phone {
+        @media only screen and (min-width: 300px) and (max-width: 575px)  { @content; }
+    }
+}
+
+// prefix mixin
+@mixin prefix-property ($property, $value, $prefixes) {
+    @each $prefix in $prefixes {
+        -#{$prefix}-#{$property}: $value;
+    }
+    #{$property}: $value;
+}
+
+// -----> mixin end
+
+// -----> common css start
+
+
+// -----> common css end
